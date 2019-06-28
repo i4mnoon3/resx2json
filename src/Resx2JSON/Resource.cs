@@ -28,12 +28,9 @@ namespace Resx2JSON
 			var s = "";
 			int i = 0;
 			foreach (var d in Data) {
-				if (i++ > 0) {
-					s += ", "; //+ Environment.NewLine;
-				}
-				s += d.ToString();
+				s += d.ToString() + ", ";
 			}
-			return "[ " + s + " ]";
+			return "[ \n" + s + "\n ]";
 		}
 		
 		public static Resource Deserialize(string filename)
